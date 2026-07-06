@@ -1761,3 +1761,23 @@ textarea.wpforms-field-large {
         box-shadow: inset 0px 0px 0px 30px rgba(194, 153, 56, 0.1);
     }
 }
+
+/* Specific styling overrides for WooCommerce Checkout form input fields */
+.checkout-grid-form .wpforms-field-large {
+    color: var(--color-crimson) !important; /* typing color is maroon/burgundy! */
+    background-color: #FAF6EE !important; /* light cream background */
+    border-color: var(--color-gold-pale) !important;
+}
+
+.checkout-grid-form .wpforms-field-large::placeholder {
+    color: #A89490 !important; /* muted placeholder text */
+}
+
+.checkout-grid-form .wpforms-field-large:focus {
+    background-color: #FAF6EE !important;
+    border-color: var(--color-crimson) !important;
+}
+
+.checkout-grid-form .wpforms-field-label {
+    color: var(--color-crimson) !important; /* Label titles are maroon */
+}
