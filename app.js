@@ -322,22 +322,6 @@ function openLookModal(lookId) {
     document.body.style.overflow = "hidden"; // Prevent background scroll
 }
 
-// Arch Portal Style Selector Logic
-const archButtons = document.querySelectorAll(".arch-btn");
-const heroSection = document.querySelector(".hero");
-if (archButtons && heroSection) {
-    archButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            archButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            
-            const shape = btn.getAttribute("data-shape");
-            heroSection.classList.remove("arch-mughal", "arch-jaipur", "arch-classical", "arch-flat");
-            heroSection.classList.add("arch-" + shape);
-        });
-    });
-}
-
 // Close Modal function
 function closeLookModal() {
     modal.classList.remove("active");
@@ -730,15 +714,96 @@ function setupWooCommerceActions() {
         });
     }
 
-    // Checkout simulator
+    // Custom WooCommerce Checkout Modal Integration
     const checkoutBtn = document.getElementById("cart-checkout-btn");
-    if (checkoutBtn) {
+    const checkoutModal = document.getElementById("woo-checkout-modal");
+    const closeCheckoutBtn = document.getElementById("close-checkout-btn");
+    const checkoutForm = document.getElementById("woo-checkout-form");
+    const checkoutSuccessView = document.getElementById("checkout-success-view");
+    const closeSuccessBtn = document.getElementById("close-success-btn");
+    const orderNumberVal = document.getElementById("order-number-val");
+    const checkoutSummaryItemsList = document.getElementById("checkout-summary-items-list");
+    const checkoutTotalVal = document.getElementById("checkout-total-val");
+
+    function closeCheckoutModal() {
+        if (checkoutModal) {
+            checkoutModal.classList.remove("active");
+            checkoutModal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+        }
+        // Reset form visual state after closed
+        setTimeout(() => {
+            if (checkoutForm) checkoutForm.style.display = "block";
+            if (checkoutSuccessView) checkoutSuccessView.style.display = "none";
+        }, 400);
+    }
+
+    if (checkoutBtn && checkoutModal) {
         checkoutBtn.addEventListener("click", () => {
             if (cart.length === 0) return;
-            alert("Proceeding to secure checkout under WooCommerce headless integrations...");
+            closeCartDrawer();
+            
+            // Render Order Summary inside checkout modal
+            if (checkoutSummaryItemsList) {
+                checkoutSummaryItemsList.innerHTML = "";
+                cart.forEach(item => {
+                    const itemDiv = document.createElement("div");
+                    itemDiv.style.display = "flex";
+                    itemDiv.style.justify = "space-between";
+                    itemDiv.style.fontSize = "0.85rem";
+                    itemDiv.style.color = "var(--color-text-dark)";
+                    itemDiv.innerHTML = `
+                        <span>${item.title} <strong>&times; ${item.quantity}</strong></span>
+                        <span>${formatPrice(item.price * item.quantity, currentCurrency)}</span>
+                    `;
+                    checkoutSummaryItemsList.appendChild(itemDiv);
+                });
+            }
+
+            if (checkoutTotalVal) {
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                checkoutTotalVal.textContent = formatPrice(subtotal, currentCurrency);
+            }
+
+            checkoutModal.classList.add("active");
+            checkoutModal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        });
+    }
+
+    if (closeCheckoutBtn) {
+        closeCheckoutBtn.addEventListener("click", closeCheckoutModal);
+    }
+
+    if (closeSuccessBtn) {
+        closeSuccessBtn.addEventListener("click", closeCheckoutModal);
+    }
+
+    // Modal backdrop click closes the checkout modal
+    if (checkoutModal) {
+        checkoutModal.addEventListener("click", (e) => {
+            if (e.target === checkoutModal) {
+                closeCheckoutModal();
+            }
+        });
+    }
+
+    // Checkout form submission simulator
+    if (checkoutForm && checkoutSuccessView && orderNumberVal) {
+        checkoutForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            // Generate mock WooCommerce order number
+            const orderNum = "#SW-" + Math.floor(10000 + Math.random() * 90000);
+            orderNumberVal.textContent = orderNum;
+            
+            // Toggle form off and success screen on
+            checkoutForm.style.display = "none";
+            checkoutSuccessView.style.display = "block";
+            
+            // Empty shopping cart state
             cart = [];
             updateCartUI();
-            closeCartDrawer();
         });
     }
 }
@@ -763,7 +828,6 @@ updateAllPrices = function(currency) {
     originalUpdateAllPrices(currency);
     updateCartUI();
 };
-
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
 } else {

@@ -16,6 +16,9 @@
     --color-text-muted: #6B5557;   /* Medium burgundy-gray for subtitle text */
     --color-text-light: #FAF6EE;   /* Light cream text for dark overlays */
 
+    /* Custom tokens for header translucency */
+    --color-header-bg: rgba(250, 246, 238, 0.95);
+
     /* Decorative & UI */
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     --border-radius-sm: 4px;
@@ -80,7 +83,7 @@ h1, h2, h3, h4 {
 
 /* Header & Navigation */
 .header {
-    background-color: rgba(250, 246, 238, 0.95);
+    background-color: var(--color-header-bg);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-gold-pale);
     position: sticky;
@@ -198,30 +201,47 @@ h1, h2, h3, h4 {
 }
 
 /* Hero Section */
+.hero-section-wrapper {
+    position: relative;
+    background-color: var(--color-bg-light);
+    overflow: visible;
+    z-index: 5;
+}
+
+.hero-bg-shape-back {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #080202; /* Extremely dark charcoal burgundy */
+    clip-path: url(#clip-dome);
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.hero-bg-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0F0405; /* Deep black-burgundy */
+    background-image: radial-gradient(circle, rgba(92, 16, 22, 0.8) 0%, rgba(15, 4, 5, 1) 100%);
+    clip-path: url(#clip-dome);
+    z-index: 1;
+}
+
 .hero {
     position: relative;
     min-height: 85vh;
     display: flex;
     align-items: center;
-    background-color: var(--color-text-dark); /* deep warm burgundy tint */
-    background-image: radial-gradient(circle, rgba(108, 22, 29, 0.6) 0%, rgba(46, 18, 20, 1) 100%);
+    background: transparent;
     color: var(--color-text-light);
     padding: 10rem 1rem 7rem;
-    overflow: hidden;
-    transition: clip-path 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.hero.arch-mughal {
-    clip-path: url(#clip-mughal);
-}
-.hero.arch-jaipur {
-    clip-path: url(#clip-jaipur);
-}
-.hero.arch-classical {
-    clip-path: url(#clip-classical);
-}
-.hero.arch-flat {
-    clip-path: url(#clip-flat);
+    overflow: visible; /* Allows child items (like the portrait frame) to overlap outside the arch boundaries */
+    z-index: 2;
 }
 
 .hero-container-grid {
@@ -244,6 +264,7 @@ h1, h2, h3, h4 {
     background-image: radial-gradient(var(--color-gold) 1px, transparent 1px);
     background-size: 24px 24px;
     pointer-events: none;
+    clip-path: url(#clip-dome);
 }
 
 .hero-content {
@@ -1686,4 +1707,57 @@ textarea.wpforms-field-large {
 .quick-add-tag:hover {
     background-color: var(--color-text-light);
     color: var(--color-crimson);
+}
+
+/* WooCommerce checkout checkmark draw-in animation styling */
+.checkmark-svg {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 3;
+    stroke: var(--color-gold);
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px var(--color-gold);
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke: var(--color-gold);
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke: var(--color-gold);
+    stroke-width: 3;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px rgba(194, 153, 56, 0.1);
+    }
 }

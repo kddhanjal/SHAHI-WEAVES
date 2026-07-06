@@ -47,32 +47,28 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero arch-jaipur">
-        <div class="hero-bg-overlay"></div>
-        <div class="container hero-container-grid">
-            <div class="hero-content">
-                <!-- Arch Portal Style Switcher -->
-                <div class="arch-selector-container">
-                    <span class="selector-label">Portal Design:</span>
-                    <div class="arch-buttons">
-                        <button class="arch-btn active" data-shape="jaipur" aria-label="Jaipur Scalloped Arch">Jaipur Scalloped</button>
-                        <button class="arch-btn" data-shape="classical" aria-label="Classical Dome Arch">Classical Dome</button>
-                        <button class="arch-btn" data-shape="flat" aria-label="Flat Royal Arch">Royal Flat</button>
+    <div class="hero-section-wrapper">
+        <div class="hero-bg-shape-back"></div>
+        <div class="hero-bg-shape"></div>
+
+        <section class="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">Shahi Weaves</h1>
+                    <p class="hero-subtitle">Heritage Handlooms & Curated Royal Outfits</p>
+                    <div class="hero-divider"></div>
+                    <p class="hero-tagline">Step into a world of pure craftsmanship, where every thread tells a story of royalty. Indulge in hand-curated, royal Indian ethnic wear designed to celebrate your confidence, grace, and inner strength.</p>
+                    <a href="#lookbook" class="btn btn-primary">Explore the Lookbook</a>
+                </div>
+                <div class="hero-image-col">
+                    <div class="hero-image-frame">
+                        <img src="assets/hero_woman.jpg" alt="Featured Royal Maroon Look" class="hero-featured-image">
                     </div>
                 </div>
-                <h1 class="hero-title">Shahi Weaves</h1>
-                <p class="hero-subtitle">Heritage Handlooms & Curated Royal Outfits</p>
-                <div class="hero-divider"></div>
-                <p class="hero-tagline">Step into a world of pure craftsmanship, where every thread tells a story of royalty. Indulge in hand-curated, royal Indian ethnic wear designed to celebrate your confidence, grace, and inner strength.</p>
-                <a href="#lookbook" class="btn btn-primary">Explore the Lookbook</a>
             </div>
-            <div class="hero-image-col">
-                <div class="hero-image-frame">
-                    <img src="assets/hero_woman.jpg" alt="Featured Royal Maroon Look" class="hero-featured-image">
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Brand Story / Heritage Section -->
     <section id="about" class="about-section">
@@ -768,22 +764,101 @@
         </div>
     </div>
 
+    <!-- WooCommerce Secure Checkout Modal -->
+    <div id="woo-checkout-modal" class="modal-backdrop" role="dialog" aria-hidden="true" style="z-index: 4000;">
+        <div class="modal-content checkout-modal-content" style="max-width: 750px; width: 90%;">
+            <button class="modal-close checkout-modal-close" id="close-checkout-btn" aria-label="Close modal">&times;</button>
+            <div class="checkout-modal-body">
+                <h2 class="checkout-title" style="font-family: var(--font-serif); color: var(--color-crimson); display: flex; align-items: center; gap: 0.5rem; font-size: 1.8rem; margin-bottom: 0.5rem;">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-gold);">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    WooCommerce Secure Checkout
+                </h2>
+                <div class="faq-divider" style="margin: 0.5rem 0 1.5rem; width: 40px; height: 2px;"></div>
+                
+                <form id="woo-checkout-form" class="checkout-grid-form">
+                    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; text-align: left;">
+                        <!-- Billing Fields -->
+                        <div class="checkout-form-section">
+                            <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-crimson); margin-bottom: 1rem; border-bottom: 1px solid var(--color-gold-pale); padding-bottom: 0.3rem;">Billing Details</h4>
+                            <div class="wpforms-field" style="margin-bottom: 0.8rem;">
+                                <label class="wpforms-field-label" for="bill-name" style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.3rem;">Full Name *</label>
+                                <input type="text" id="bill-name" class="wpforms-field-large" required placeholder="Aarav Sharma" style="width: 100%; padding: 0.6rem; border: 1px solid var(--color-gold-pale); border-radius: 4px; font-family: var(--font-sans); font-size: 0.85rem;">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.8rem;">
+                                <div class="wpforms-field">
+                                    <label class="wpforms-field-label" for="bill-email" style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.3rem;">Email Address *</label>
+                                    <input type="email" id="bill-email" class="wpforms-field-large" required placeholder="aarav@example.com" style="width: 100%; padding: 0.6rem; border: 1px solid var(--color-gold-pale); border-radius: 4px; font-family: var(--font-sans); font-size: 0.85rem;">
+                                </div>
+                                <div class="wpforms-field">
+                                    <label class="wpforms-field-label" for="bill-phone" style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.3rem;">Phone *</label>
+                                    <input type="tel" id="bill-phone" class="wpforms-field-large" required placeholder="+91 98765 43210" style="width: 100%; padding: 0.6rem; border: 1px solid var(--color-gold-pale); border-radius: 4px; font-family: var(--font-sans); font-size: 0.85rem;">
+                                </div>
+                            </div>
+                            <div class="wpforms-field" style="margin-bottom: 0.8rem;">
+                                <label class="wpforms-field-label" for="bill-address" style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.3rem;">Street Address *</label>
+                                <input type="text" id="bill-address" class="wpforms-field-large" required placeholder="12, Royal Palace Road" style="width: 100%; padding: 0.6rem; border: 1px solid var(--color-gold-pale); border-radius: 4px; font-family: var(--font-sans); font-size: 0.85rem;">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.8rem;">
+                                <div class="wpforms-field">
+                                    <label class="wpforms-field-label" for="bill-city" style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.3rem;">City *</label>
+                                    <input type="text" id="bill-city" class="wpforms-field-large" required placeholder="Jaipur" style="width: 100%; padding: 0.6rem; border: 1px solid var(--color-gold-pale); border-radius: 4px; font-family: var(--font-sans); font-size: 0.85rem;">
+                                </div>
+                                <div class="wpforms-field">
+                                    <label class="wpforms-field-label" for="bill-zip" style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.3rem;">PIN Code *</label>
+                                    <input type="text" id="bill-zip" class="wpforms-field-large" required placeholder="302001" style="width: 100%; padding: 0.6rem; border: 1px solid var(--color-gold-pale); border-radius: 4px; font-family: var(--font-sans); font-size: 0.85rem;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="checkout-order-summary" style="background-color: var(--color-cream-card); padding: 1.2rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-gold-pale); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-crimson); margin-bottom: 1rem; border-bottom: 1px solid var(--color-gold-pale); padding-bottom: 0.3rem;">Your Order</h4>
+                                <div id="checkout-summary-items-list" style="max-height: 150px; overflow-y: auto; margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
+                                    <!-- Items loaded dynamically -->
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-weight: bold; border-top: 1px dashed var(--color-gold); padding-top: 0.8rem; margin-bottom: 1rem;">
+                                    <span style="font-family: var(--font-sans); font-size: 0.95rem; color: var(--color-text-dark);">Total:</span>
+                                    <span id="checkout-total-val" style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-crimson);">₹0</span>
+                                </div>
+                                
+                                <div style="background-color: var(--color-bg-light); border: 1px solid var(--color-gold-pale); padding: 0.8rem; border-radius: 4px; margin-bottom: 1.2rem; font-size: 0.8rem; line-height: 1.4; color: var(--color-text-dark);">
+                                    <input type="radio" id="pay-cod-opt" name="pay-method" checked style="margin-right: 0.3rem;">
+                                    <label for="pay-cod-opt"><strong>Cash on Delivery (COD)</strong></label>
+                                    <p style="margin-top: 0.3rem; color: var(--color-text-muted);">Pay upon delivery of your handloom garment following virtual fitting approval.</p>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.8rem;">Place Order (Secure)</button>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Success State (Hidden by default) -->
+                <div id="checkout-success-view" style="display: none; text-align: center; padding: 2rem 1rem;">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; display: flex; justify-content: center; align-items: center;">
+                        <svg class="checkmark-svg" viewBox="0 0 52 52" style="width: 52px; height: 52px; display: block;">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-family: var(--font-serif); color: var(--color-crimson); font-size: 1.8rem;">Order Placed Successfully!</h3>
+                    <p style="font-family: var(--font-sans); color: var(--color-text-muted); font-size: 0.95rem; max-width: 500px; margin: 0.8rem auto 2rem; line-height: 1.6;">
+                        Thank you for shopping. Your order <strong id="order-number-val" style="color: var(--color-crimson);">#SW-29402</strong> has been logged in the system. Our support team will coordinate your virtual fit evaluation shortly.
+                    </p>
+                    <button class="btn btn-secondary" id="close-success-btn" style="padding: 0.8rem 2.5rem;">Continue Shopping</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- SVG Clip Path Definitions -->
     <svg width="0" height="0" style="position: absolute;">
         <defs>
-            <clipPath id="clip-mughal" clipPathUnits="objectBoundingBox">
-                <!-- Pointed Mughal Mehrab Dome arch shape path -->
-                <path d="M 0,1 L 0,0.18 C 0.12,0.18 0.32,0.12 0.45,0.06 C 0.48,0.02 0.5,0 0.5,0 C 0.5,0 0.52,0.02 0.55,0.06 C 0.68,0.12 0.88,0.18 1,0.18 L 1,1 Z" />
-            </clipPath>
-            <clipPath id="clip-jaipur" clipPathUnits="objectBoundingBox">
-                <!-- Jaipur Scalloped / Multi-foil arch shape path -->
-                <path d="M 0,1 L 0,0.22 C 0.08,0.22 0.13,0.15 0.2,0.17 C 0.27,0.19 0.33,0.11 0.4,0.09 C 0.45,0.07 0.48,0.02 0.5,0 C 0.52,0.02 0.55,0.07 0.6,0.09 C 0.67,0.11 0.73,0.19 0.8,0.17 C 0.87,0.15 0.92,0.22 1,0.22 L 1,1 Z" />
-            </clipPath>
-            <clipPath id="clip-classical" clipPathUnits="objectBoundingBox">
-                <!-- Classical Royal Semi-Circular dome path -->
-                <path d="M 0,1 L 0,0.22 C 0.1,0.1 0.28,0 0.5,0 C 0.72,0 0.9,0.1 1,0.22 L 1,1 Z" />
-            </clipPath>
-            <clipPath id="clip-flat" clipPathUnits="objectBoundingBox">
+            <clipPath id="clip-dome" clipPathUnits="objectBoundingBox">
                 <!-- Royal Flat arch path -->
                 <path d="M 0,1 L 0,0 L 1,0 L 1,1 Z" />
             </clipPath>
