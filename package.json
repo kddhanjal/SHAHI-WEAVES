@@ -1,0 +1,21 @@
+{
+  "name": "shahi-weaves",
+  "version": "1.0.0",
+  "description": "Shahi Weaves - Timeless Indian Traditions & Premium Ethnic Wear",
+  "main": "app.js",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "ethnic-wear",
+    "indian-fashion",
+    "chikankari",
+    "traditional-wear",
+    "handloom"
+  ],
+  "author": "Shahi Weaves",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
