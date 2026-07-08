@@ -322,7 +322,6 @@ function renderLookbookGrid() {
                 </div>
             </div>
             <div class="look-meta">
-                <span class="look-number">${data.num}</span>
                 <h3 class="look-name">${data.title}</h3>
                 <p class="look-desc">${data.outfit}</p>
                 <div class="look-price-container">
@@ -344,7 +343,6 @@ function renderLookbookGrid() {
 // Modal Elements
 const modal = document.getElementById("details-modal");
 const modalImg = document.getElementById("modal-img");
-const modalLookNum = document.getElementById("modal-look-num");
 const modalLookTitle = document.getElementById("modal-look-title");
 const modalOutfit = document.getElementById("modal-outfit");
 const modalJewelry = document.getElementById("modal-jewelry");
@@ -363,7 +361,6 @@ function openLookModal(lookId) {
     modalImg.src = data.image;
     modalImg.alt = data.title + " - " + data.outfit;
     modalImg.title = data.title + " - " + data.outfit;
-    modalLookNum.textContent = data.num;
     modalLookTitle.textContent = data.title;
     modalOutfit.textContent = data.outfit;
     modalJewelry.textContent = data.jewelry;
