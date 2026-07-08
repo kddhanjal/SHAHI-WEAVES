@@ -44,6 +44,7 @@ const looksData = {
     "1": {
         num: "Look 01",
         title: "Pastel Chikankari Elegance",
+        category: "daily",
         outfit: "Pastel pink cotton chikankari kurta with white palazzo pants",
         jewelry: "Silver oxidized jhumkas and a silver bracelet",
         setting: "Outdoor cafe in Chandigarh",
@@ -56,6 +57,7 @@ const looksData = {
     "2": {
         num: "Look 02",
         title: "Mint Green Floral Walk",
+        category: "daily",
         outfit: "Mint green floral printed kurti with matching cotton pants",
         jewelry: "Gold hoops and a thin chain necklace",
         setting: "Tree-lined street walk",
@@ -68,6 +70,7 @@ const looksData = {
     "3": {
         num: "Look 03",
         title: "Rust Georgette Midi-Saree",
+        category: "daily",
         outfit: "Rust georgette midi-saree with black sleeveless blouse",
         jewelry: "Thin metal bangles",
         setting: "Minimalist textured wall background",
@@ -80,6 +83,7 @@ const looksData = {
     "4": {
         num: "Look 04",
         title: "Yellow Block-Print Anarkali",
+        category: "festive",
         outfit: "Yellow block-print cotton Anarkali with sheer dupatta",
         jewelry: "Pearl studs and a red bindi",
         setting: "Indoors near a large window",
@@ -92,6 +96,7 @@ const looksData = {
     "5": {
         num: "Look 05",
         title: "Navy Blue Threadwork Straight Cut",
+        category: "daily",
         outfit: "Navy blue straight-cut kurta with silver thread work",
         jewelry: "Silver rings and drop earrings",
         setting: "Balcony with green plants",
@@ -104,6 +109,7 @@ const looksData = {
     "6": {
         num: "Look 06",
         title: "Ivory Handloom Linen Kurta",
+        category: "festive",
         outfit: "Ivory handloom linen kurta with beige cigarette pants",
         jewelry: "Pearl drop earrings and a gold watch",
         setting: "Courtyard with morning light",
@@ -116,6 +122,7 @@ const looksData = {
     "7": {
         num: "Look 07",
         title: "Maroon Velvet Haveli Festive",
+        category: "festive",
         outfit: "Maroon velvet kurta with light embroidery and cream pants",
         jewelry: "Gold jhumkas and a statement ring",
         setting: "Haveli corridor with warm lighting",
@@ -128,6 +135,7 @@ const looksData = {
     "8": {
         num: "Look 08",
         title: "Lavender Organza Garden Dream",
+        category: "festive",
         outfit: "Lavender organza suit with palazzo pants",
         jewelry: "Crystal studs and a thin bracelet",
         setting: "Flower garden during evening hours",
@@ -140,6 +148,7 @@ const looksData = {
     "9": {
         num: "Look 09",
         title: "Teal Ajrakh Artisan Classic",
+        category: "glam",
         outfit: "Teal Ajrakh printed A-line kurta with off-white trousers",
         jewelry: "Silver choker and matching studs",
         setting: "Cafe with hand-painted walls",
@@ -152,6 +161,7 @@ const looksData = {
     "10": {
         num: "Look 10",
         title: "Champagne Beige Hotel Luxury",
+        category: "festive",
         outfit: "Champagne beige silk kurta with matching trousers",
         jewelry: "Gold chain and matching drop earrings",
         setting: "Boutique hotel lobby",
@@ -165,6 +175,7 @@ const looksData = {
     "11": {
         num: "Look 11",
         title: "Powder Blue Angrakha Freshness",
+        category: "daily",
         outfit: "Powder blue cotton Angrakha kurta with white palazzo pants",
         jewelry: "Silver anklet and hoops",
         setting: "Old-city lane with bougainvillea",
@@ -177,6 +188,7 @@ const looksData = {
     "12": {
         num: "Look 12",
         title: "Emerald Banarasi Regal Touch",
+        category: "festive",
         outfit: "Emerald green Banarasi tissue kurta with ivory pants",
         jewelry: "Emerald studs and a thin bangle",
         setting: "Lounge with arched doorways",
@@ -190,6 +202,7 @@ const looksData = {
     "13": {
         num: "Look 13",
         title: "Sky Blue Cafe Chic",
+        category: "daily",
         outfit: "Sky blue striped cotton kurta with white pants",
         jewelry: "Silver hoops and a simple tote bag",
         setting: "Neighborhood cafe seating",
@@ -203,6 +216,7 @@ const looksData = {
     "14": {
         num: "Look 14",
         title: "Sage Green Balcony Calm",
+        category: "daily",
         outfit: "Sage green linen co-ord kurta set",
         jewelry: "Gold studs and a slim watch",
         setting: "Balcony with potted plants",
@@ -216,6 +230,7 @@ const looksData = {
     "15": {
         num: "Look 15",
         title: "Peach Floral Literary Elegance",
+        category: "daily",
         outfit: "Peach floral cotton A-line kurta with cigarette pants",
         jewelry: "Pearl studs and a silver ring",
         setting: "Bookstore with wooden shelves",
@@ -228,6 +243,7 @@ const looksData = {
     "16": {
         num: "Look 16",
         title: "Beige Handblock Park Pathway",
+        category: "daily",
         outfit: "Beige handblock printed kurta with olive pants",
         jewelry: "Silver studs and a slim bangle",
         setting: "Park pathway with green trees",
@@ -240,6 +256,7 @@ const looksData = {
     "17": {
         num: "Look 17",
         title: "Wine Embroidered Grand Ballroom",
+        category: "glam",
         outfit: "Wine-colored embroidered silk Anarkali with organza dupatta",
         jewelry: "Chandelier earrings and stacked bangles",
         setting: "Ballroom with crystal chandeliers",
@@ -252,6 +269,7 @@ const looksData = {
     "18": {
         num: "Look 18",
         title: "Black Sequin Rooftop Night",
+        category: "glam",
         outfit: "Black sequin saree with sleeveless blouse",
         jewelry: "Drop earrings and a cocktail ring",
         setting: "Rooftop lounge at night",
@@ -264,6 +282,7 @@ const looksData = {
     "19": {
         num: "Look 19",
         title: "Champagne Gold Palace Sharara",
+        category: "glam",
         outfit: "Champagne gold sharara set with mirror work",
         jewelry: "Kundan necklace and matching earrings",
         setting: "Heritage palace entrance",
@@ -275,6 +294,52 @@ const looksData = {
         isNewArrival: true
     }
 };
+
+// Render lookbook cards dynamically to optimize page speed and reduce index.html size
+function renderLookbookGrid() {
+    const grid = document.getElementById("lookbook-grid-container");
+    if (!grid) return;
+
+    grid.innerHTML = "";
+    Object.keys(looksData).forEach(lookId => {
+        const data = looksData[lookId];
+        const card = document.createElement("div");
+        card.className = "look-card";
+        card.setAttribute("data-look", lookId);
+        card.setAttribute("data-category", data.category || "daily");
+        
+        // Hide looks beyond Look 6 initially
+        if (parseInt(lookId, 10) > 6) {
+            card.classList.add("hidden");
+        }
+
+        card.innerHTML = `
+            <div class="look-image-wrapper">
+                <img src="${data.image}" alt="${data.title} - ${data.outfit}" title="${data.title} - ${data.outfit}" class="look-image">
+                ${data.isNewArrival ? '<span class="new-arrival-tag">New Arrival</span>' : ''}
+                <div class="look-hover-overlay">
+                    <span class="view-details-tag">View Look Details</span>
+                </div>
+            </div>
+            <div class="look-meta">
+                <span class="look-number">${data.num}</span>
+                <h3 class="look-name">${data.title}</h3>
+                <p class="look-desc">${data.outfit}</p>
+                <div class="look-price-container">
+                    <span class="original-price" data-base-price="${data.basePrice}">${formatPrice(data.basePrice, currentCurrency)}</span>
+                    <span class="discount-price" data-base-price="${data.discountPrice}">${formatPrice(data.discountPrice, currentCurrency)}</span>
+                    <span class="discount-badge">${data.discountPercent}% OFF</span>
+                </div>
+            </div>
+        `;
+
+        card.addEventListener("click", () => {
+            openLookModal(lookId);
+        });
+
+        grid.appendChild(card);
+    });
+}
 
 // Modal Elements
 const modal = document.getElementById("details-modal");
@@ -296,8 +361,8 @@ function openLookModal(lookId) {
     if (!data) return;
 
     modalImg.src = data.image;
-    modalImg.alt = data.title;
-    modalImg.title = data.title;
+    modalImg.alt = data.title + " - " + data.outfit;
+    modalImg.title = data.title + " - " + data.outfit;
     modalLookNum.textContent = data.num;
     modalLookTitle.textContent = data.title;
     modalOutfit.textContent = data.outfit;
@@ -330,13 +395,6 @@ function closeLookModal() {
     document.body.style.overflow = ""; // Restore background scroll
 }
 
-// Event Listeners for Look Cards
-document.querySelectorAll(".look-card").forEach(card => {
-    card.addEventListener("click", () => {
-        const lookId = card.getAttribute("data-look");
-        openLookModal(lookId);
-    });
-});
 
 // Event Listener for Modal Close Button
 if (modalCloseBtn) {
@@ -889,6 +947,7 @@ openLookModal = function(lookId) {
 
 // Initialize on startup
 function init() {
+    renderLookbookGrid();
     updateAllPrices("INR");
     applyVisibility();
     setupWooCommerceActions();
