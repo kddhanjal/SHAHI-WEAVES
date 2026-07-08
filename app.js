@@ -318,7 +318,7 @@ function renderLookbookGrid() {
                 <img src="${data.image}" alt="${data.title} - ${data.outfit}" title="${data.title} - ${data.outfit}" class="look-image">
                 ${data.isNewArrival ? '<span class="new-arrival-tag">New Arrival</span>' : ''}
                 <div class="look-hover-overlay">
-                    <span class="view-details-tag">View Look Details</span>
+                    <span class="view-details-tag">View Details</span>
                 </div>
             </div>
             <div class="look-meta">
