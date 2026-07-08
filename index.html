@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N3MSR5GM');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9HL2B2XSQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X9HL2B2XSQ');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shahi Weaves | Timeless Indian Traditions & Premium Ethnic Wear</title>
@@ -10,6 +25,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3MSR5GM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header Section -->
     <header class="header">
         <div class="container header-container">
@@ -41,31 +62,11 @@
                 </div>
             </nav>
         </div>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9HL2B2XSQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X9HL2B2XSQ');
-</script>
-        
-    </header><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9HL2B2XSQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X9HL2B2XSQ');
-</script>
-
+    </header>
     <!-- Hero Section -->
     <div class="hero-section-wrapper">
         <div class="hero-bg-shape-back"></div>
         <div class="hero-bg-shape"></div>
-
         <section class="hero">
             <div class="hero-bg-overlay"></div>
             <div class="container hero-container-grid">
@@ -84,7 +85,77 @@
             </div>
         </section>
     </div>
-
+    <!-- Reviews / Testimonials Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <span class="section-tag" style="text-align: center; display: block; margin-bottom: 0.5rem;">Royal Testimonials</span>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">What Our Patrons Say</h2>
+            
+            <div class="reviews-grid" id="reviews-display-grid">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The bespoke fitting consultation is phenomenal. The Anarkali fits like a dream, and the Lucknowi weaving is absolutely authentic. Truly royal."</p>
+                    <h4 class="review-author">Maharani Gayatri Devi</h4>
+                    <span class="review-designation">Patron from Jaipur</span>
+                </div>
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Converting prices to USD made checking out seamless. The handloom fabric feels so premium, and the details modal let me examine the jewelry recommendation closely."</p>
+                    <h4 class="review-author">Meera Ranganathan</h4>
+                    <span class="review-designation">Patron from California</span>
+                </div>
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Submitting custom requests via their premium forms was extremely fast. The Cash on Delivery checkout confirmation gave me absolute confidence in this brand."</p>
+                    <h4 class="review-author">Aishwarya Nair</h4>
+                    <span class="review-designation">Patron from Mumbai</span>
+                </div>
+            </div>
+            <!-- Review Actions: Option to Add a Review! -->
+            <div style="text-align: center; margin-top: 3.5rem;">
+                <button id="open-add-review-btn" class="btn btn-secondary" style="padding: 0.8rem 2.5rem;">Share Your Experience</button>
+            </div>
+        </div>
+    </section>
+    <!-- Custom Add Review Modal Form -->
+    <div id="add-review-modal" class="modal-backdrop" aria-hidden="true" role="dialog">
+        <div class="modal-content" style="max-width: 500px; padding: 2rem;">
+            <button class="modal-close" id="close-review-modal-btn">&times;</button>
+            <h3 style="font-family: var(--font-serif); color: var(--color-crimson); font-size: 1.8rem; margin-bottom: 0.5rem; text-align: center;">Share Your Experience</h3>
+            <p style="font-family: var(--font-sans); color: var(--color-text-muted); font-size: 0.85rem; text-align: center; margin-bottom: 1.5rem;">We value the words of our patrons. Let us know how your royal garment felt.</p>
+            
+            <form id="add-review-form">
+                <div class="wpforms-field-container" style="gap: 1.2rem; margin-bottom: 1.5rem;">
+                    <div class="wpforms-field">
+                        <label class="wpforms-field-label" for="rev-name">Your Name *</label>
+                        <input type="text" id="rev-name" class="wpforms-field-large" required placeholder="Aarav Sen" style="width: 100%; border: 1px solid var(--color-gold-pale); border-radius: 4px; padding: 0.6rem; color: var(--color-text-dark) !important; background-color: #FAF6EE !important;">
+                    </div>
+                    <div class="wpforms-field">
+                        <label class="wpforms-field-label" for="rev-location">Location / Designation *</label>
+                        <input type="text" id="rev-location" class="wpforms-field-large" required placeholder="New Delhi" style="width: 100%; border: 1px solid var(--color-gold-pale); border-radius: 4px; padding: 0.6rem; color: var(--color-text-dark) !important; background-color: #FAF6EE !important;">
+                    </div>
+                    <div class="wpforms-field">
+                        <label class="wpforms-field-label" for="rev-stars">Rating *</label>
+                        <select id="rev-stars" class="wpforms-field-large" required style="width: 100%; border: 1px solid var(--color-gold-pale); border-radius: 4px; padding: 0.6rem; color: var(--color-text-dark) !important; background-color: #FAF6EE !important;">
+                            <option value="5">★★★★★ (5 Stars)</option>
+                            <option value="4">★★★★☆ (4 Stars)</option>
+                            <option value="3">★★★☆☆ (3 Stars)</option>
+                            <option value="2">★★☆☆☆ (2 Stars)</option>
+                            <option value="1">★☆☆☆☆ (1 Star)</option>
+                        </select>
+                    </div>
+                    <div class="wpforms-field">
+                        <label class="wpforms-field-label" for="rev-text">Your Review *</label>
+                        <textarea id="rev-text" class="wpforms-field-large" required placeholder="The pure handloom cotton has a soft royal sheen..." style="width: 100%; min-height: 80px; border: 1px solid var(--color-gold-pale); border-radius: 4px; padding: 0.6rem; color: var(--color-text-dark) !important; background-color: #FAF6EE !important; resize: vertical;"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.8rem;">Submit Review</button>
+            </form>
+        </div>
+    </div>
     <!-- Brand Story / Heritage Section -->
     <section id="about" class="about-section">
         <div class="container">
@@ -105,7 +176,6 @@
             </div>
         </div>
     </section>
-
     <!-- Lookbook Section -->
     <section id="lookbook" class="lookbook-section">
         <div class="container">
@@ -114,7 +184,6 @@
                 <h2 class="section-title">The Royal Edit</h2>
                 <p class="section-subtitle">Twelve unique, carefully structured traditional looks designed for different moods, settings, and silhouettes.</p>
             </div>
-
             <!-- Theme Collage Category Selector -->
             <div class="theme-collage">
                 <div class="theme-block active" data-theme="all">
@@ -146,7 +215,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Controls Panel -->
             <div class="lookbook-controls">
                 <div class="sort-wrapper">
@@ -159,7 +227,6 @@
                     </select>
                 </div>
             </div>
-
             <div class="lookbook-grid">
                 <!-- Look 1 -->
                 <div class="look-card" data-look="1" data-category="daily">
@@ -180,7 +247,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 2 -->
                 <div class="look-card" data-look="2" data-category="daily">
                     <div class="look-image-wrapper">
@@ -200,7 +266,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 3 -->
                 <div class="look-card" data-look="3" data-category="daily">
                     <div class="look-image-wrapper">
@@ -220,7 +285,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 4 -->
                 <div class="look-card" data-look="4" data-category="festive">
                     <div class="look-image-wrapper">
@@ -240,7 +304,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 5 -->
                 <div class="look-card" data-look="5" data-category="daily">
                     <div class="look-image-wrapper">
@@ -260,7 +323,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 6 -->
                 <div class="look-card" data-look="6" data-category="festive">
                     <div class="look-image-wrapper">
@@ -280,7 +342,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 7 -->
                 <div class="look-card hidden" data-look="7" data-category="festive">
                     <div class="look-image-wrapper">
@@ -300,7 +361,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 8 -->
                 <div class="look-card hidden" data-look="8" data-category="festive">
                     <div class="look-image-wrapper">
@@ -320,7 +380,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 9 -->
                 <div class="look-card hidden" data-look="9" data-category="glam">
                     <div class="look-image-wrapper">
@@ -340,7 +399,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 10 -->
                 <div class="look-card hidden" data-look="10" data-category="festive" data-new-arrival="true">
                     <div class="look-image-wrapper">
@@ -361,7 +419,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 11 -->
                 <div class="look-card hidden" data-look="11" data-category="daily">
                     <div class="look-image-wrapper">
@@ -381,7 +438,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 12 -->
                 <div class="look-card hidden" data-look="12" data-category="festive" data-new-arrival="true">
                     <div class="look-image-wrapper">
@@ -402,7 +458,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 13 -->
                 <div class="look-card hidden" data-look="13" data-category="daily" data-new-arrival="true">
                     <div class="look-image-wrapper">
@@ -423,7 +478,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 14 -->
                 <div class="look-card hidden" data-look="14" data-category="daily" data-new-arrival="true">
                     <div class="look-image-wrapper">
@@ -444,7 +498,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 15 -->
                 <div class="look-card hidden" data-look="15" data-category="daily">
                     <div class="look-image-wrapper">
@@ -464,7 +517,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 16 -->
                 <div class="look-card hidden" data-look="16" data-category="daily">
                     <div class="look-image-wrapper">
@@ -484,7 +536,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 17 -->
                 <div class="look-card hidden" data-look="17" data-category="glam">
                     <div class="look-image-wrapper">
@@ -504,7 +555,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 18 -->
                 <div class="look-card hidden" data-look="18" data-category="glam">
                     <div class="look-image-wrapper">
@@ -524,7 +574,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Look 19 -->
                 <div class="look-card hidden" data-look="19" data-category="glam" data-new-arrival="true">
                     <div class="look-image-wrapper">
@@ -546,14 +595,12 @@
                     </div>
                 </div>
             </div>
-
             <!-- Show More Action Button -->
             <div class="lookbook-actions">
                 <button id="show-more-btn" class="btn btn-secondary">Show More Looks</button>
             </div>
         </div>
     </section>
-
     <!-- Custom Consultation / WPForms Contact Section -->
     <section id="contact" class="consultation-section">
         <div class="container consultation-container">
@@ -574,7 +621,6 @@
                             <input type="email" id="wpforms-field-email" class="wpforms-field-large" placeholder="Enter your email address" required>
                         </div>
                     </div>
-
                     <div class="wpforms-field-row">
                         <div class="wpforms-field wpforms-field-select">
                             <label class="wpforms-field-label" for="wpforms-field-select">Interested Collection</label>
@@ -585,21 +631,18 @@
                                 <option value="custom" selected>Bespoke Custom Weaving</option>
                             </select>
                         </div>
-
                         <div class="wpforms-field wpforms-field-textarea">
                             <label class="wpforms-field-label" for="wpforms-field-message">Requirements & Notes</label>
                             <textarea id="wpforms-field-message" class="wpforms-field-large" placeholder="Style, fabrics, colors, or sizing requests..."></textarea>
                         </div>
                     </div>
                 </div>
-
                 <div class="wpforms-submit-container">
                     <button type="submit" class="wpforms-submit btn btn-secondary">Submit Fitting Request</button>
                 </div>
             </form>
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section id="faq" class="faq-section">
         <div class="container faq-container">
@@ -616,7 +659,6 @@
                         <p>Every outfit is crafted using traditional handloom techniques passed down through generations. We source pure mulberry silk, organic cotton, and hand-spun linen directly from artisan weavers across Lucknow, Banaras, and Jaipur, preserving Indian heritage.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>How does the virtual custom fitting consultation work?</span>
@@ -626,7 +668,6 @@
                         <p>Once you request a consultation, our lead designer coordinates a virtual session to guide you through taking measurements. We then hand-weave and tailor the outfit custom to your silhouette.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>What is your shipping and return policy?</span>
@@ -636,7 +677,6 @@
                         <p>We offer free insured shipping across India and international shipping options. Since each outfit is tailored or hand-finished, we do not accept standard returns but provide complimentary alterations to guarantee a perfect fit.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>How do I care for my handloom garments?</span>
@@ -646,7 +686,6 @@
                         <p>We recommend professional dry cleaning for all silk, velvet, and heavily embroidered Anarkali pieces. For lighter cotton and linen collections, gentle hand washing with mild detergents in cold water is suitable.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>How are the category discounts calculated?</span>
@@ -659,7 +698,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
@@ -707,7 +745,6 @@
             <p>&copy; 2026 Shahi Weaves. All rights reserved. Crafted by Antigravity.</p>
         </div>
     </footer>
-
     <!-- Details Modal Backdrop -->
     <div id="details-modal" class="modal-backdrop" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -724,22 +761,18 @@
                         <h4 class="modal-detail-label">The Outfit</h4>
                         <p class="modal-detail-value" id="modal-outfit">Pastel pink cotton chikankari kurta with white palazzo pants</p>
                     </div>
-
                     <div class="modal-detail-section">
                         <h4 class="modal-detail-label">Jewelry & Accents</h4>
                         <p class="modal-detail-value" id="modal-jewelry">Delicate silver oxidized jhumkas and a sleek silver bracelet</p>
                     </div>
-
                     <div class="modal-detail-section">
                         <h4 class="modal-detail-label">Setting</h4>
                         <p class="modal-detail-value" id="modal-setting">Bright, sunny outdoor cafe in Chandigarh</p>
                     </div>
-
                     <div class="modal-detail-section">
                         <h4 class="modal-detail-label">Mood</h4>
                         <p class="modal-detail-value" id="modal-mood">Confident, serene, and smiling softly at the camera</p>
                     </div>
-
                     <div class="modal-detail-section">
                         <h4 class="modal-detail-label">Estimated Price</h4>
                         <div class="look-price-container">
@@ -748,7 +781,6 @@
                             <span class="discount-badge" id="modal-discount-badge">0% OFF</span>
                         </div>
                     </div>
-
                     <div class="modal-woo-actions" style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; width: 100%;">
                         <button class="btn btn-primary modal-action-btn" id="modal-add-to-cart-btn" style="flex-grow: 1;">Add to Cart</button>
                         <button class="btn btn-secondary modal-inquiry-btn" style="flex-grow: 1;">Bespoke Tailoring Inquiry</button>
@@ -757,7 +789,6 @@
             </div>
         </div>
     </div>
-
     <!-- WooCommerce Slide-out Side Cart Drawer -->
     <div id="woo-side-cart" class="woo-cart-drawer" aria-hidden="true">
         <div class="cart-drawer-overlay"></div>
@@ -778,7 +809,6 @@
             </div>
         </div>
     </div>
-
     <!-- WooCommerce Secure Checkout Modal -->
     <div id="woo-checkout-modal" class="modal-backdrop" role="dialog" aria-hidden="true" style="z-index: 4000;">
         <div class="modal-content checkout-modal-content" style="max-width: 750px; width: 90%;">
@@ -827,7 +857,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Order Summary -->
                         <div class="checkout-order-summary" style="background-color: var(--color-cream-card); padding: 1.2rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-gold-pale); display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
@@ -869,7 +898,6 @@
             </div>
         </div>
     </div>
-
     <!-- SVG Clip Path Definitions -->
     <svg width="0" height="0" style="position: absolute;">
         <defs>
@@ -877,9 +905,12 @@
                 <!-- Royal Flat arch path -->
                 <path d="M 0,1 L 0,0 L 1,0 L 1,1 Z" />
             </clipPath>
+            <clipPath id="clip-portrait-mehrab" clipPathUnits="objectBoundingBox">
+                <!-- Ornate Mehrab Arch path for portrait framing -->
+                <path d="M 0.1,1 L 0.1,0.4 C 0.15,0.4 0.173,0.35 0.217,0.363 C 0.26,0.375 0.293,0.275 0.36,0.263 C 0.393,0.25 0.427,0.213 0.5,0.175 C 0.573,0.213 0.607,0.25 0.64,0.263 C 0.707,0.275 0.74,0.375 0.783,0.363 C 0.827,0.35 0.85,0.4 0.9,0.4 L 0.9,1 Z" />
+            </clipPath>
         </defs>
     </svg>
-
     <script src="app.js"></script>
 </body>
 </html>
