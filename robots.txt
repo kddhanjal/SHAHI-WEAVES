@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shahi-weaves.vercel.app/sitemap.xml

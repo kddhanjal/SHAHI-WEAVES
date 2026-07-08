@@ -808,6 +808,77 @@ function setupWooCommerceActions() {
     }
 }
 
+// Setup Reviews submission and modal controllers
+function setupReviews() {
+    const openReviewBtn = document.getElementById("open-add-review-btn");
+    const reviewModal = document.getElementById("add-review-modal");
+    const closeReviewBtn = document.getElementById("close-review-modal-btn");
+    const reviewForm = document.getElementById("add-review-form");
+    const reviewsGrid = document.getElementById("reviews-display-grid");
+
+    function openReviewModal() {
+        if (reviewModal) {
+            reviewModal.classList.add("active");
+            reviewModal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        }
+    }
+
+    function closeReviewModal() {
+        if (reviewModal) {
+            reviewModal.classList.remove("active");
+            reviewModal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+        }
+    }
+
+    if (openReviewBtn) openReviewBtn.addEventListener("click", openReviewModal);
+    if (closeReviewBtn) closeReviewBtn.addEventListener("click", closeReviewModal);
+    if (reviewModal) {
+        reviewModal.addEventListener("click", (e) => {
+            if (e.target === reviewModal) {
+                closeReviewModal();
+            }
+        });
+    }
+
+    if (reviewForm && reviewsGrid) {
+        reviewForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById("rev-name").value.trim();
+            const location = document.getElementById("rev-location").value.trim();
+            const starCount = parseInt(document.getElementById("rev-stars").value, 10);
+            const text = document.getElementById("rev-text").value.trim();
+
+            if (!name || !location || !text) return;
+
+            // Generate stars string
+            let stars = "";
+            for (let i = 0; i < 5; i++) {
+                stars += i < starCount ? "★" : "☆";
+            }
+
+            // Create new review card element
+            const card = document.createElement("div");
+            card.className = "review-card";
+            card.innerHTML = `
+                <div class="review-stars">${stars}</div>
+                <p class="review-text">"${text}"</p>
+                <h4 class="review-author">${name}</h4>
+                <span class="review-designation">Patron from ${location}</span>
+            `;
+
+            // Prepend new card to the grid
+            reviewsGrid.insertBefore(card, reviewsGrid.firstChild);
+
+            // Clean up
+            reviewForm.reset();
+            closeReviewModal();
+        });
+    }
+}
+
 // Track active ID when opening the modal
 const originalOpenLookModal = openLookModal;
 openLookModal = function(lookId) {
@@ -820,6 +891,7 @@ function init() {
     updateAllPrices("INR");
     applyVisibility();
     setupWooCommerceActions();
+    setupReviews();
 }
 
 // Override updateAllPrices to trigger cart UI refresh too (for correct currency symbols inside the cart drawer!)
