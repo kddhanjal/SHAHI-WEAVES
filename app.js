@@ -297,6 +297,7 @@ function openLookModal(lookId) {
 
     modalImg.src = data.image;
     modalImg.alt = data.title;
+    modalImg.title = data.title;
     modalLookNum.textContent = data.num;
     modalLookTitle.textContent = data.title;
     modalOutfit.textContent = data.outfit;

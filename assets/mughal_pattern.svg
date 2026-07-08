@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+    <!-- Seamless Mughal Architecture and Jaali Pattern -->
+    <style>
+        .gold-line {
+            fill: none;
+            stroke: #C29938;
+            stroke-width: 0.8;
+            stroke-opacity: 0.08; /* 8% opacity to subtly blend in */
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .gold-line-fine {
+            fill: none;
+            stroke: #C29938;
+            stroke-width: 0.4;
+            stroke-opacity: 0.06;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+    
+    <!-- Jaali Geometry (Interlocking Octagons & Star Grids) -->
+    <!-- Center star and diagonal connections -->
+    <path class="gold-line" d="M 0,100 L 40,60 L 100,60 L 100,0 M 100,200 L 100,140 L 40,140 L 0,100" />
+    <path class="gold-line" d="M 200,100 L 160,60 L 100,60 M 100,200 L 100,140 L 160,140 L 200,100" />
+    <path class="gold-line" d="M 100,0 L 100,60 L 60,100 L 100,140 L 100,200" />
+    <path class="gold-line" d="M 100,0 L 100,60 L 140,100 L 100,140 L 100,200" />
+    
+    <!-- Diagonal cross connections -->
+    <path class="gold-line-fine" d="M 0,0 L 40,60 M 200,0 L 160,60 M 0,200 L 40,140 M 200,200 L 160,140" />
+    <path class="gold-line-fine" d="M 40,60 L 0,100 L 40,140 M 160,60 L 200,100 L 160,140" />
+    
+    <!-- Palace Arches (Miniature Mehrabs in center grid) -->
+    <!-- Center Arch at (100, 100) -->
+    <path class="gold-line" d="M 75,115 L 75,100 C 75,93 82,90 87,92 C 92,94 96,87 100,83 C 104,87 108,94 113,92 C 118,90 125,93 125,100 L 125,115 Z" />
+    <!-- Corner Arches (tiled at corners) -->
+    <!-- Top-Left corner Arch -->
+    <path class="gold-line" d="M 0,15 L 0,0 C 0,0 8,0 13,-8 C 18,-8 25,-5 25,0 L 25,15" transform="translate(0, 0)" />
+    <!-- Top-Right corner Arch -->
+    <path class="gold-line" d="M 0,15 L 0,0 C 0,0 8,0 13,-8 C 18,-8 25,-5 25,0 L 25,15" transform="translate(175, 0)" />
+    <!-- Bottom-Left corner Arch -->
+    <path class="gold-line" d="M 0,15 L 0,0 C 0,0 8,0 13,-8 C 18,-8 25,-5 25,0 L 25,15" transform="translate(0, 185)" />
+    <!-- Bottom-Right corner Arch -->
+    <path class="gold-line" d="M 0,15 L 0,0 C 0,0 8,0 13,-8 C 18,-8 25,-5 25,0 L 25,15" transform="translate(175, 185)" />
+    
+    <!-- Floral Vines & Lotus/Paisley Buds -->
+    <!-- Center floral motif inside center arch -->
+    <path class="gold-line-fine" d="M 100,115 C 100,110 95,108 95,103 C 95,98 100,94 100,94 C 100,94 105,98 105,103 C 105,108 100,110 100,115 Z" />
+    <path class="gold-line-fine" d="M 98,103 C 96,101 92,101 90,103 C 88,105 88,108 92,110" />
+    <path class="gold-line-fine" d="M 102,103 C 104,101 108,101 110,103 C 112,105 112,108 108,110" />
+    
+    <!-- Corner scrolling vines -->
+    <path class="gold-line-fine" d="M 0,0 C 15,10 30,5 40,25 C 45,35 35,45 25,40 C 20,35 25,25 35,30" />
+    <path class="gold-line-fine" d="M 200,0 C 185,10 170,5 160,25 C 155,35 165,45 175,40 C 180,35 175,25 165,30" />
+    <path class="gold-line-fine" d="M 0,200 C 15,190 30,195 40,175 C 45,165 35,155 25,160 C 20,165 25,175 35,170" />
+    <path class="gold-line-fine" d="M 200,200 C 185,190 170,195 160,175 C 155,165 165,155 175,160 C 180,165 175,175 165,170" />
+    
+    <!-- Additional Jaali stars at 40,60 and other joints -->
+    <circle cx="100" cy="60" r="2.5" class="gold-line-fine" />
+    <circle cx="100" cy="140" r="2.5" class="gold-line-fine" />
+    <circle cx="40" cy="60" r="2.5" class="gold-line-fine" />
+    <circle cx="40" cy="140" r="2.5" class="gold-line-fine" />
+    <circle cx="160" cy="60" r="2.5" class="gold-line-fine" />
+    <circle cx="160" cy="140" r="2.5" class="gold-line-fine" />
+</svg>
